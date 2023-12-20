@@ -1,0 +1,80 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MeowLang",
+	"patterns": [
+		{
+			"include" : "#comments"
+		},
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include" : "#constants"
+		},
+		{
+			"include" : "functions"
+		},
+		{
+			"include" : "operators"
+		}
+	],
+	"repository": {
+		"operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.meow",
+                    "match": "\\b(*|+|-|/|%|!)\\b"
+                }
+            ]
+        },
+		"functions": {
+			"patterns": [
+				{
+					"name": "support.function.builtin.meow",
+					"match": "\\b(print|input)\\b"
+				}
+			]
+		},
+		"constants": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.meow",
+                    "match": "\\b(true|false|none|\\d+(\\.\\d+)?)\\b"
+                }
+            ]
+        },
+		"variables" : {
+			"patterns" : [{
+				"name" : "variable.other.meow",
+				"match": "\\b[a-zA-Z_]*\\b"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.hash.meow",
+				"match" : "#.*"
+			}]
+		},
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.meow",
+				"match": "\\b(if|while|for|return|__show__|func|class|elif|else|and|or)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.meow",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.meow",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.meow"
+}

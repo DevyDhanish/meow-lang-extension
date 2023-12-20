@@ -1,0 +1,11 @@
+{
+    "iconDefinitions": {
+      "file": {
+        "iconPath": "./icon.png"
+      }
+    },
+
+    "languageIds": {
+        "ini" : "meow"
+    }
+}

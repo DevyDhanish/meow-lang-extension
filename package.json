@@ -1,0 +1,36 @@
+{
+  "name": "meow",
+  "displayName": "Meowlang",
+  "publisher": "DevyDhanish",
+  "description": "Meow programming language",
+  "version": "2.0.0",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "meow",
+      "aliases": ["MeowLang", "meow"],
+      "extensions": [".meow"],
+      "configuration": "./language-configuration.json",
+      "icon": {
+        "light": "./icon.png",
+        "dark": "./icon.png"  
+      }
+    }],
+    "grammars": [{
+      "language": "meow",
+      "scopeName": "source.meow",
+      "path": "./syntaxes/meow.tmLanguage.json"
+    }],
+    "iconThemes": [{
+      "id": "default",
+      "label": "default icon for .meow files",
+      "path": "./meow-icon-theme.json"
+    }]
+  }
+}
